@@ -14,5 +14,5 @@ public interface StudentService {
     StudentReturnItem getStudentItem(int id);
     void deleteStudentItem(int id);
     void editStudentItem(StudentReturnItem studentItem);
-    StudentReturnItem saveStudentItem(StudentPostItem postItem);
+    void saveStudentItem(StudentPostItem postItem);
 }

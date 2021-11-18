@@ -11,7 +11,6 @@ import java.util.List;
  * @author SamiraAfshar
  * created on 17/11/2021
  */
-@RestController
 @RequestMapping("/api/student")
 public interface StudentApi {
 
@@ -28,5 +27,5 @@ public interface StudentApi {
     ResponseEntity<Void> editStudentItem(@RequestBody StudentReturnItem studentItem);
 
     @PostMapping
-    ResponseEntity<StudentReturnItem> saveStudentItem(@RequestBody StudentPostItem postItem);
+    ResponseEntity<Void> saveStudentItem(@RequestBody StudentPostItem postItem);
 }
