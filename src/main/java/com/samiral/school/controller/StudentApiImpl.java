@@ -27,17 +27,19 @@ public class StudentApiImpl implements StudentApi {
 
     @Override
     public ResponseEntity<StudentReturnItem> getStudentItem(int id) {
-        return null;
+        return new ResponseEntity( studentService.getStudentItem(id),HttpStatus.OK);
     }
 
     @Override
     public ResponseEntity<Void> deleteStudentItem(int id) {
-        return null;
+       studentService.deleteStudentItem(id);
+        return new ResponseEntity(HttpStatus.OK);
     }
 
     @Override
     public ResponseEntity<Void> editStudentItem(StudentReturnItem studentItem) {
-        return null;
+        studentService.editStudentItem(studentItem);
+        return new ResponseEntity(HttpStatus.OK);
     }
 
     @Override
