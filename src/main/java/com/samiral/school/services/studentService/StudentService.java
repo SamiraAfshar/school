@@ -1,4 +1,4 @@
-package com.samiral.school.service;
+package com.samiral.school.services.studentService;
 
 import com.samiral.school.dto.postItem.StudentPostItem;
 import com.samiral.school.dto.returnItem.StudentReturnItem;

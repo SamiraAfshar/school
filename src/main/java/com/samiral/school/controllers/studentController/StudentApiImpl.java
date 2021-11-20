@@ -1,8 +1,8 @@
-package com.samiral.school.controller;
+package com.samiral.school.controllers.studentController;
 
 import com.samiral.school.dto.postItem.StudentPostItem;
 import com.samiral.school.dto.returnItem.StudentReturnItem;
-import com.samiral.school.service.StudentService;
+import com.samiral.school.services.studentService.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

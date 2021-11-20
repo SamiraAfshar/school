@@ -1,6 +1,6 @@
-package com.samiral.school.repository;
+package com.samiral.school.repositories.studentRepository;
 
-import com.samiral.school.entity.StudentEntity;
+import com.samiral.school.entities.StudentEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,9 +1,9 @@
-package com.samiral.school.service;
+package com.samiral.school.services.studentService;
 
 import com.samiral.school.dto.postItem.StudentPostItem;
 import com.samiral.school.dto.returnItem.StudentReturnItem;
-import com.samiral.school.entity.StudentEntity;
-import com.samiral.school.repository.StudentRepository;
+import com.samiral.school.entities.StudentEntity;
+import com.samiral.school.repositories.studentRepository.StudentRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.samiral.school.controller;
+package com.samiral.school.controllers.studentController;
 
 import com.samiral.school.dto.postItem.StudentPostItem;
 import com.samiral.school.dto.returnItem.StudentReturnItem;

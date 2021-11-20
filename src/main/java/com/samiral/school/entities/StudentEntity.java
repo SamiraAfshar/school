@@ -1,4 +1,4 @@
-package com.samiral.school.entity;
+package com.samiral.school.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
