@@ -45,7 +45,6 @@ public class StudentApiImpl implements StudentApi {
     @Override
     public ResponseEntity<Void> saveStudentItem(StudentPostItem postItem) {
         studentService.saveStudentItem(postItem);
-
         return new ResponseEntity(HttpStatus.OK);
     }
 }
