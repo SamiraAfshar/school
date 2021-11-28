@@ -1,9 +1,7 @@
 package com.samiral.school.services.teacherService;
 
 import com.samiral.school.dto.postItem.TeacherPostItem;
-import com.samiral.school.dto.returnItem.StudentReturnItem;
 import com.samiral.school.dto.returnItem.TeacherReturnItem;
-import com.samiral.school.entities.StudentEntity;
 import com.samiral.school.entities.TeacherEntity;
 import com.samiral.school.repositories.teacherRepository.TeacherRepository;
 import lombok.RequiredArgsConstructor;

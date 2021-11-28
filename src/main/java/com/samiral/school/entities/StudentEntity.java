@@ -22,4 +22,7 @@ public class StudentEntity {
     private int id;
     private String firstName;
     private String lastName;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "addressId" , referencedColumnName = "id")
+    private AddressEntity address;
 }
