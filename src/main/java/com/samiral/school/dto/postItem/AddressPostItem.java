@@ -7,14 +7,13 @@ import lombok.NoArgsConstructor;
 
 /**
  * @author SamiraAfshar
- * created on 17/11/2021
+ * created on 20/11/2021
  */
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Builder
-public class StudentPostItem {
-    private String firstName;
-    private String lastName;
-    private AddressPostItem address;
+public class AddressPostItem {
+    private String city;
+    private String streetName;
 }

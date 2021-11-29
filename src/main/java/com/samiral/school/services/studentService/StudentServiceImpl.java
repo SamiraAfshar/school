@@ -1,7 +1,9 @@
 package com.samiral.school.services.studentService;
 
 import com.samiral.school.dto.postItem.StudentPostItem;
+import com.samiral.school.dto.returnItem.AddressReturnItem;
 import com.samiral.school.dto.returnItem.StudentReturnItem;
+import com.samiral.school.entities.AddressEntity;
 import com.samiral.school.entities.StudentEntity;
 import com.samiral.school.repositories.studentRepository.StudentRepository;
 import lombok.RequiredArgsConstructor;
@@ -35,6 +37,11 @@ public class StudentServiceImpl implements StudentService {
                                 .id(studentEntity.getId())
                                 .firstName(studentEntity.getFirstName())
                                 .lastName(studentEntity.getLastName())
+                                .address(AddressReturnItem.builder()
+                                        .id(studentEntity.getAddress().getId())
+                                        .city(studentEntity.getAddress().getCity())
+                                        .streetName(studentEntity.getAddress().getStreetName())
+                                        .build())
                                 .build()
                 );
             }
@@ -55,6 +62,11 @@ public class StudentServiceImpl implements StudentService {
             studentReturnItem.setId(studentEntity.getId());
             studentReturnItem.setFirstName(studentEntity.getFirstName());
             studentReturnItem.setLastName(studentEntity.getLastName());
+            studentReturnItem.setAddress(AddressReturnItem.builder()
+                    .id(studentEntity.getAddress().getId())
+                    .city(studentEntity.getAddress().getCity())
+                    .streetName(studentEntity.getAddress().getStreetName())
+                    .build());
             return studentReturnItem;
         }
         catch (Exception e)
@@ -81,6 +93,12 @@ public class StudentServiceImpl implements StudentService {
             StudentEntity studentEntity = repository.getById(studentItem.getId());
             studentEntity.setFirstName(studentItem.getFirstName());
             studentEntity.setLastName(studentItem.getLastName());
+            AddressEntity addressEntity = AddressEntity.builder()
+                    .id(studentItem.getAddress().getId())
+                    .city(studentItem.getAddress().getCity())
+                    .streetName(studentItem.getAddress().getStreetName())
+                    .build();
+            studentEntity.setAddress(addressEntity);
             repository.save(studentEntity);
         }
         catch (Exception e)
@@ -95,6 +113,10 @@ public class StudentServiceImpl implements StudentService {
             StudentEntity studentEntity=new StudentEntity();
             studentEntity.setFirstName(postItem.getFirstName());
             studentEntity.setLastName(postItem.getLastName());
+            AddressEntity addressEntity =new AddressEntity();
+            addressEntity.setCity(postItem.getAddress().getCity());
+            addressEntity.setStreetName(postItem.getAddress().getStreetName());
+            studentEntity.setAddress(addressEntity);
             repository.save(studentEntity);
         }
         catch (Exception e)

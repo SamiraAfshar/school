@@ -17,4 +17,5 @@ public class StudentReturnItem {
     private int id;
     private String firstName;
     private String lastName;
+    private AddressReturnItem address;
 }
